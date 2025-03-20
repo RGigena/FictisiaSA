@@ -1,0 +1,108 @@
+﻿@page "/editarCliente/{personaId:int}"
+
+<div class="row">
+    <div class="col-12">
+        <div class="page-title-box justify-content-between d-flex align-items-md-center flex-md-row flex-column">
+            <h4 class="page-title">Editar Cliente</h4>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="header-title"></h4>
+                <EditForm Model="PersonaVM" OnValidSubmit="GuardarCambios">
+                    <DataAnnotationsValidator />
+                    <ValidationSummary />
+
+                    <div class="mb-3">
+                        <label for="Nombre" class="form-label">Nombre</label>
+                        <InputText id="Nombre" class="form-control" @bind-Value="PersonaVM.Nombre" required />
+                        <ValidationMessage For="@(() => PersonaVM.Nombre)"/>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="DNI" class="form-label">DNI</label>
+                        <InputNumber id="DNI" class="form-control" @bind-Value="PersonaVM.Dni" required />
+                        <ValidationMessage For="@(() => PersonaVM.Dni)" />
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="Edad" class="form-label">Edad</label>
+                        <InputNumber id="Edad" class="form-control" @bind-Value="PersonaVM.Edad" required />
+                        <ValidationMessage For="@(() => PersonaVM.Edad)" />
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="Genero" class="form-label">Género</label>
+                        <select id="Genero" class="form-control" @bind="PersonaVM.Genero" required>
+                            <option value="">Seleccione...</option>
+                            <option value="Masculino">Masculino</option>
+                            <option value="Femenino">Femenino</option>
+                            <option value="Otro">Otro</option>
+                        </select>
+                    </div>
+
+
+                    <div class="mb-3">
+                        <label class="form-label">¿Está activo?</label>
+                        <div>
+                            <InputSelect @bind-Value="PersonaVM.Activo.Activo" required>
+                                <option value="true">Sí</option>
+                                <option value="false">No</option>
+                            </InputSelect>
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">¿Maneja?</label>
+                        <div>
+                            <InputSelect @bind-Value="PersonaVM.Adicionales.Maneja" required>
+                                <option value="true">Sí</option>
+                                <option value="false">No</option>
+                            </InputSelect>
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">¿Usa Lentes?</label>
+                        <div>
+                            <InputSelect @bind-Value="PersonaVM.Adicionales.UsaLentes" required>
+                                <option value="true">Sí</option>
+                                <option value="false">No</option>
+                            </InputSelect>
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">¿Es Diabético?</label>
+                        <div>
+                            <InputSelect @bind-Value="PersonaVM.Adicionales.EsDiabetico" required>
+                                <option value="true">Sí</option>
+                                <option value="false">No</option>
+                            </InputSelect>
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">¿Posee alguna otra enfermedad?</label>
+                        <div>
+                            <InputSelect @bind-Value="PersonaVM.Adicionales.OtraEnfermedad" required>
+                                <option value="true">Sí</option>
+                                <option value="false">No</option>
+                            </InputSelect>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="Comentarios" class="form-label">Si tiene otra enfermedad, ¿cuál?</label>
+                        <InputText id="Comentarios" class="form-control" @bind-Value="PersonaVM.Adicionales.Comentarios " maxlength="700" />
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Guardar Cambios</button>
+                </EditForm>
+            </div>
+        </div>
+    </div>
+</div>

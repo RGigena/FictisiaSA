@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.8.34511.84
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FictisiaSA", "FictisiaSA.csproj", "{D5CB4080-F727-4C1E-B530-C9D005AF3E06}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FictisiaSA", "FictisiaSA.csproj", "{D5CB4080-F727-4C1E-B530-C9D005AF3E06}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fictisia.Application", "..\Fictisia.Application\Fictisia.Application.csproj", "{50756262-3B29-4947-9910-0415839B274A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fictisia.Infraestructure", "..\Fictisia.Infraestructure\Fictisia.Infraestructure.csproj", "{5F90DDE0-55DA-47C4-910F-16104813D6A6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{D5CB4080-F727-4C1E-B530-C9D005AF3E06}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D5CB4080-F727-4C1E-B530-C9D005AF3E06}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D5CB4080-F727-4C1E-B530-C9D005AF3E06}.Release|Any CPU.Build.0 = Release|Any CPU
+		{50756262-3B29-4947-9910-0415839B274A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{50756262-3B29-4947-9910-0415839B274A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{50756262-3B29-4947-9910-0415839B274A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{50756262-3B29-4947-9910-0415839B274A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5F90DDE0-55DA-47C4-910F-16104813D6A6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5F90DDE0-55DA-47C4-910F-16104813D6A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5F90DDE0-55DA-47C4-910F-16104813D6A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5F90DDE0-55DA-47C4-910F-16104813D6A6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

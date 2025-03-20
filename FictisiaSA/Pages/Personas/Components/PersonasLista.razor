@@ -1,0 +1,41 @@
+﻿<!-- start page title -->
+<div class="row">
+    <div class="col-12">
+        <div class="page-title-box justify-content-between d-flex align-items-md-center flex-md-row flex-column">
+            <h4 class="page-title">Clientes</h4>
+        </div>
+    </div>
+</div>
+
+<!-- end page title -->
+<div class="row">
+   <div class="col-12">
+       <div class="card">
+           <div class="card-body">
+                <h4 class="header-title">Todos los clientes</h4>
+                <p class="text-muted fs-14"></p>
+
+                <table id="basic-datatable" class="table table-striped dt-responsive w-100">
+                    <thead>
+                        <tr>
+                            <th>Nombre</th>
+                            <th>Apellido</th>
+                            <th>Edad</th>
+                            <th>Genero</th>
+                            <th>Habilitado</th>
+                            <th>Ver Más</th>
+                            <th>Editar</th>
+                            <th>Eliminar</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var persona in ListaPersonas)
+                        {
+                           <PersonasItem PersonaVM="persona" ></PersonasItem> 
+                        }
+                    </tbody>
+                </table>
+           </div>
+       </div>
+   </div>
+</div>
